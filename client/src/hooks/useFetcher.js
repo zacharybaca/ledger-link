@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { FetcherContext } from '../contexts/Fetcher/FetcherContext';
+import { FetcherContext } from '../context/Fetcher/FetcherContext';
 
 export const useFetcher = () => {
   const context = useContext(FetcherContext);

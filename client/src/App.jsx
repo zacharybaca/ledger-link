@@ -3,7 +3,7 @@ import NavBar from './components/Layout/NavBar/NavBar';
 import Footer from './components/Layout/Footer/Footer';
 import Home from './components/Pages/Home';
 import NotFound from './components/Pages/NotFound';
-import './App.css';
+
 
 const Layout = () => (
   <div className="app-container">

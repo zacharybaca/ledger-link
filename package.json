@@ -1,7 +1,7 @@
 {
-  "name": "react-starter-template",
+  "name": "ledger-link",
   "version": "1.0.0",
-  "description": "🚀 A lightweight MERN starter template.",
+  "description": "Main json file for LedgerLink",
   "main": "server/server.js",
   "scripts": {
     "install-all": "npm install && npm install --prefix client && npm install --prefix server",
