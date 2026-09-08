@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom';
-import './nav-bar.css';
+import styles from './NavBar.module.css';
 
 const NavBar = () => {
   return (
-    <nav className="main-nav">
-      <div className="nav-container">
-        <Link to="/" className="nav-logo-link">
+    <nav className={styles['main-nav']}>
+      <div className={styles['nav-container']}>
+        <Link to="/" className={styles['nav-logo-link']}>
           <h1>MERN Starter</h1>
         </Link>
 
-        <ul className="nav-links">
+        <ul className={styles['nav-links']}>
           <li>
-            <Link to="/" className="nav-item">
+            <Link to="/" className={styles['nav-item']}>
               Home
             </Link>
           </li>
