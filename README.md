@@ -1,76 +1,42 @@
-# MERN Starter Template (Slim)
+# LedgerLink: Intelligent Client Reconciliation Portal
 
-A lightweight MERN boilerplate with:
-- React + Vite frontend
-- Express + MongoDB backend
-- Shared monorepo scripts
-- Your existing custom `useFetcher` implementation unchanged
+A multi-tenant SaaS application built on the MERN stack designed to eliminate the friction of client-accountant communication. It features real-time transaction resolution via WebSockets, automated magic-link onboarding, and an AI-powered financial assistant.
+
+## Tech Stack
+- **Frontend**: React.js (Vite), Vanilla CSS Modules, React Router, Zustand/Context API, native `fetch` API.
+- **Backend**: Node.js, Express.js, MongoDB (Mongoose).
+- **Real-Time & AI**: Socket.IO (live chat), LangChain/LangGraph (RAG assistant).
+- **Asset Management**: Cloudinary.
+- **Email Services**: Nodemailer / SendGrid.
 
 ## Project Structure
 
 ```text
-react-starter-template/
+ledger-link/
 ├── .env.example
 ├── client/
 │   ├── src/
-│   │   ├── components/
-│   │   ├── contexts/Fetcher/
-│   │   ├── hooks/useFetcher.js
-│   │   └── tests/
+│   │   ├── assets/             # Global styles and static images
+│   │   ├── components/         # Reusable UI (DataTable, Modals, Buttons)
+│   │   ├── features/           # Domain-specific modules (auth, clients, transactions, chat)
+│   │   ├── context/            # Global state (AuthContext, SocketContext)
+│   │   ├── hooks/              # Custom hooks (useAuth, useSocket)
+│   │   ├── pages/              # Route views
+│   │   └── services/           # API fetch abstractions
+│   ├── vite.config.js
 │   └── package.json
 ├── server/
-│   ├── middleware/errorHandler.js
-│   ├── tests/
-│   ├── app.js
+│   ├── config/                 # DB connection, Cloudinary config
+│   ├── controllers/            # Route logic
+│   ├── middleware/             # Role-based guards, Multer uploads
+│   ├── models/                 # Mongoose schemas (AccountingFirm, Company, User, Transaction)
+│   ├── routes/                 # Express routes
+│   ├── services/               # socketService.js, emailService.js, ragPipeline.js
 │   ├── server.js
 │   └── package.json
 └── package.json
-```
 
-## Getting Started
 
-1. Install dependencies:
-```bash
-npm run install-all
-```
 
-2. Configure environment:
-```bash
-cp .env.example server/.env
-```
 
-3. Start both apps:
-```bash
-npm run dev
-```
 
-- Frontend: `http://localhost:5173`
-- Backend: `http://localhost:5000`
-
-## API
-
-### `GET /api/health`
-Returns a basic health payload:
-
-```json
-{ "success": true, "message": "API is running" }
-```
-
-## Scripts
-
-### Root
-- `npm run install-all`
-- `npm run dev`
-- `npm run client`
-- `npm run server`
-
-### Client
-- `npm run dev`
-- `npm run lint`
-- `npm run build`
-- `npm test`
-
-### Server
-- `npm run dev`
-- `npm start`
-- `npm test`
