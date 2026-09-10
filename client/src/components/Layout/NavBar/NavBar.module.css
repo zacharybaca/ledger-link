@@ -2,19 +2,24 @@
    1. BASE NAVBAR LAYOUT & LOGO SIZING
    ========================================= */
 .main-nav {
-  background-color: #0f172a; /* Jury Navy Blue */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  background-color: #f9fafb;
   border-bottom: 1px solid #1e293b;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-sizing: border-box;
+  border: 2px solid blue;
 }
 
 .nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: fit-content;
   padding: 15px 30px;
   display: flex;
-  justify-content: space-between; /* Pushes logo left, links right */
+  border: 2px solid yellow;
   align-items: center; /* Vertically centers everything */
 }
 
@@ -23,12 +28,12 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+  border: 3px solid red;
 }
 
 .nav-logo-svg {
-  height: 40px; /* Restricts the height so it doesn't take over the screen */
-  width: auto;
-  max-width: 250px;
+  height: 15vh; /* Restricts the height so it doesn't take over the screen */
+  width: 8vw;
   display: block;
 }
 
@@ -43,12 +48,14 @@
 }
 
 .nav-item {
-  color: #f8fafc;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
   background: transparent;
-  border: none;
+  border: 4px solid orange;
   font-size: 1rem;
   cursor: pointer;
 }

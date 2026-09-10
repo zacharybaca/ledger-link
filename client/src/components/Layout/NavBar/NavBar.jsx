@@ -6,17 +6,16 @@ const NavBar = () => {
     <nav className={styles['main-nav']}>
       <div className={styles['nav-container']}>
         <Link to="/" className={styles['nav-logo-link']}>
-          <h1>MERN Starter</h1>
+          <img src="./public/app-logo.png" alt="LedgerLink Logo" className={styles['nav-logo-svg']} />
         </Link>
-
-        <ul className={styles['nav-links']}>
+      </div>
+      <ul className={styles['nav-links']}>
           <li>
             <Link to="/" className={styles['nav-item']}>
               Home
             </Link>
           </li>
         </ul>
-      </div>
     </nav>
   );
 };

@@ -4,6 +4,7 @@ import Footer from './components/Layout/Footer/Footer';
 import Home from './components/Pages/Home';
 import NotFound from './components/Pages/NotFound';
 import TransactionBoard from './features/transactions/TransactionBoard';
+import './index.css'; // Global styles
 
 
 const Layout = () => (
