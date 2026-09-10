@@ -3,7 +3,7 @@ import NavBar from './components/Layout/NavBar/NavBar';
 import Footer from './components/Layout/Footer/Footer';
 import Home from './components/Pages/Home';
 import NotFound from './components/Pages/NotFound';
-import DataTable from './components/DataTable/DataTable';
+import TransactionBoard from './features/transactions/TransactionBoard';
 
 
 const Layout = () => (
@@ -21,7 +21,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="datatable" element={<DataTable />} />
+        <Route path="transactions" element={<TransactionBoard />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
