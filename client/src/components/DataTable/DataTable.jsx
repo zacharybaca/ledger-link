@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './DataTable.module.css';
-// import StatusBadge from '../StatusBadge/StatusBadge';
+import StatusBadge from '../StatusBadge/StatusBadge';
 
 const DataTable = ({ transactions = [] }) => {
   if (transactions.length === 0) {
@@ -26,7 +26,7 @@ const DataTable = ({ transactions = [] }) => {
               <td>{tx.vendor}</td>
               <td>${tx.amount.toFixed(2)}</td>
               <td>
-                {/* <StatusBadge status={tx.status} /> */}
+                <StatusBadge status={tx.status} />
               </td>
               <td>
                 <button className={styles['action-btn']}>Review</button>
