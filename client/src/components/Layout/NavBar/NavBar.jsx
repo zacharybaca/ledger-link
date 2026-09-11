@@ -6,7 +6,7 @@ const NavBar = () => {
     <nav className={styles['main-nav']}>
       <div className={styles['nav-container']}>
         <Link to="/" className={styles['nav-logo-link']}>
-          <img src="./public/app-logo.png" alt="LedgerLink Logo" className={styles['nav-logo-svg']} />
+          <img src="/public/app-logo.png" alt="LedgerLink Logo" className={styles['nav-logo-svg']} />
         </Link>
       </div>
       <ul className={styles['nav-links']}>
